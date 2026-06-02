@@ -1,0 +1,313 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #D1EBFA;
+}
+@media (min-width: 991.98px) {
+  body {
+    /* 针对 Chrome 和 Safari */
+    /* 针对 Firefox */
+  }
+  body ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  body ::-webkit-scrollbar-track {
+    background: #F1F1F1;
+    border-radius: 10px;
+  }
+  body ::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 10px;
+  }
+  body ::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+  }
+  body * {
+    scrollbar-width: thin;
+    /* 使滚动条变窄 */
+    scrollbar-color: #888888 #F1F1F1;
+    /* 滚动条颜色和轨道背景色 */
+  }
+}
+/* 根容器 */
+.root-container {
+  position: absolute;
+  background: url("./static/images/bg1.jpg"), #E9ECFF no-repeat center / 100% 100%;
+  border-radius: 10px;
+  overflow: auto;
+  inset: 20px 30px;
+}
+@media (max-width: 991.98px) {
+  .root-container {
+    inset: 10px 10px;
+  }
+}
+.root-container::-webkit-scrollbar {
+  display: none;
+}
+.root-container .header-container {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28px;
+  color: #F5F5F5;
+  font-weight: bold;
+}
+@media (max-width: 991.98px) {
+  .root-container .header-container {
+    font-size: 16px;
+  }
+}
+.root-container .header-container > .home,
+.root-container .header-container > .refresh {
+  cursor: pointer;
+  margin: 0 15px;
+}
+.root-container .header-container > .home:hover,
+.root-container .header-container > .refresh:hover,
+.root-container .header-container > .home:active,
+.root-container .header-container > .refresh:active {
+  /* 颜色周围的阴影,增加阴影的模糊度 */
+  text-shadow: 0 0 5px #DA8D6F, 0 0 10px #DA8D6F;
+}
+.root-container .content-container {
+  background-color: #F5F5F580;
+  border-radius: 2px;
+  padding: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  max-height: calc(100vh - 100px);
+  /* 根据头部的高度设定最大高度 */
+  overflow-y: auto;
+}
+@media (max-width: 991.98px) {
+  .root-container .content-container {
+    max-height: calc(100vh - 70px);
+  }
+}
+.root-container .content-container .content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media (max-width: 991.98px) {
+  .root-container .content-container .content-header {
+    font-size: 16px;
+  }
+}
+.root-container .content-container .content-header > span:last-child {
+  font-size: 18px;
+}
+@media (max-width: 991.98px) {
+  .root-container .content-container .content-header > span:last-child {
+    font-size: 14px;
+  }
+}
+.root-container .content-container .content-body-base {
+  display: flex;
+  flex-wrap: wrap;
+  /* 允许换行 */
+  justify-content: space-evenly;
+  margin-top: 5px;
+}
+.root-container .content-container .content-body-base > .base-item-1 {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  flex: 0 1 185px;
+  /* 设置子项的宽度为180px，并允许缩小和增长 */
+  margin: 10px;
+  /* 设置子项之间的间距 */
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 991.98px) {
+  .root-container .content-container .content-body-base > .base-item-1 {
+    flex: 0 1 45%;
+    margin: 5px;
+    /* 设置子项之间的间距 */
+  }
+}
+.root-container .content-container .content-body-base > .base-item-1 .base-item-title {
+  font-size: 14px;
+  text-indent: 0.5em;
+}
+.root-container .content-container .content-body-base > .base-item-1 .base-item-value {
+  font-size: 18px;
+  text-indent: 0.5em;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  word-break: break-word;
+  /* 中文和长单词换行 */
+  word-wrap: break-word;
+  /* 旧浏览器兼容 */
+  white-space: normal;
+  /* 允许换行 */
+  overflow-wrap: break-word;
+  /* 长单词或长字符串换行 */
+  display: block;
+  max-height: 1.5em;
+  overflow-y: auto;
+  /* 显示垂直滚动条 */
+}
+@media (max-width: 991.98px) {
+  .root-container .content-container .content-body-base > .base-item-1 .base-item-value {
+    font-size: 14px;
+  }
+}
+.root-container .content-container .content-body-base > .base-item-2 {
+  flex: 0 1 410px;
+  /* 设置子项的宽度为180px，并允许缩小和增长 */
+}
+@media (max-width: 991.98px) {
+  .root-container .content-container .content-body-base > .base-item-2 {
+    flex: 0 1 95%;
+    margin: 5px;
+    /* 设置子项之间的间距 */
+  }
+}
+.root-container .content-container .content-body-base > .base-item-2 .base-item-value {
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  /* 允许换行 */
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-y: auto;
+  /* 显示垂直滚动条 */
+  min-height: 180px;
+  max-height: 230px;
+  gap: 5px;
+}
+.root-container .content-container .content-body-base > .base-item-2 .base-item-value .item-value-item {
+  flex: 0 1 30%;
+  display: flex;
+  flex-direction: column;
+}
+.root-container .content-container .content-body-base > .base-item-2 .base-item-value .item-value-item > span {
+  word-break: break-word;
+  /* 中文和长单词换行 */
+  word-wrap: break-word;
+  /* 旧浏览器兼容 */
+  white-space: normal;
+  /* 允许换行 */
+  overflow-wrap: break-word;
+  /* 长单词或长字符串换行 */
+}
+.root-container .content-container .content-body-base > .base-item-2 .base-item-value .item-value-item > span:last-of-type {
+  text-align: center;
+}
+.root-container .content-container .content-body-base > .base-item-3 {
+  flex: 0 1 95%;
+  margin: 5px;
+  /* 设置子项之间的间距 */
+}
+.root-container .content-container .content-body-base > .base-item-3 .base-item-value {
+  display: flex;
+  flex-wrap: wrap;
+  /* 允许换行 */
+  align-items: flex-start;
+  /* 子项的高度将根据内容高度决定 */
+  align-content: flex-start;
+  justify-content: space-evenly;
+  gap: 10px;
+  overflow-y: auto;
+  /* 显示垂直滚动条 */
+  max-height: 230px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.root-container .content-container .content-body-base > .base-item-3 .base-item-value .item-value-item {
+  flex: 0 1 auto;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+  padding: 5px;
+}
+.root-container .content-container .content-body-base > .base-item-3 .base-item-value .item-value-item > span:last-of-type {
+  font-weight: normal;
+}
+.root-container .content-container .content-body-base > .base-item-4 {
+  flex: 0 1 95%;
+  margin: 5px;
+  /* 设置子项之间的间距 */
+}
+.root-container .content-container .content-body-base > .base-item-4 .base-item-value {
+  display: flex;
+  flex-wrap: wrap;
+  /* 允许换行 */
+  align-items: flex-start;
+  /* 子项的高度将根据内容高度决定 */
+  align-content: flex-start;
+  justify-content: space-evenly;
+  gap: 10px;
+  overflow-y: auto;
+  /* 显示垂直滚动条 */
+  max-height: 330px;
+}
+.root-container .content-container .content-body-base > .base-item-4 .base-item-value .item-value-item {
+  flex: 0 1 42.5%;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+  padding: 0.5em;
+  border-radius: 5px;
+  display: flex;
+}
+@media (max-width: 991.98px) {
+  .root-container .content-container .content-body-base > .base-item-4 .base-item-value .item-value-item {
+    flex: 0 1 95%;
+  }
+}
+.root-container .content-container .content-body-base > .base-item-4 .base-item-value .item-value-item > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.root-container .content-container .content-body-base > .base-item-4 .base-item-value .item-value-item > div span {
+  word-break: break-word;
+  /* 中文和长单词换行 */
+  word-wrap: break-word;
+  /* 旧浏览器兼容 */
+  white-space: normal;
+  /* 允许换行 */
+  overflow-wrap: break-word;
+  /* 长单词或长字符串换行 */
+  overflow-x: auto;
+  /* 显示垂直滚动条 */
+  max-height: 1.5em;
+}
+.root-container .content-container .content-body-base > .base-item-4 .base-item-value .item-value-item > div:first-child {
+  flex: 3;
+}
+.root-container .content-container .content-body-base > .base-item-4 .base-item-value .item-value-item > div:last-child {
+  flex: 2;
+}
+@media (max-width: 991.98px) {
+  .root-container .content-container .content-body-base > .base-item-4 .base-item-value .item-value-item > div:last-child {
+    flex: 3;
+  }
+}
+.root-container .content-container .content-body-base > .base-item-4 .base-item-value .item-value-item > div:last-child > span {
+  text-align: right;
+}
+.root-container .dynamic-size {
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (max-width: 991.98px) {
+  .root-container .dynamic-size {
+    font-size: 16px;
+  }
+}
+.root-container .sub-title {
+  margin-top: 5px;
+  padding-top: 5px;
+  display: block;
+  border-top: #111827 2px solid;
+}

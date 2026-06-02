@@ -1,0 +1,1 @@
+const dbJson={home:"https://kongyu039.dpdns.org",defaultUrl:"https://api.txttool.cn/netcut/note/info/",defaultRead:"82b123eb52460997"};
