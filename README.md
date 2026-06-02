@@ -1,9 +1,11 @@
 ## 注意
+
 > [!NOTE]
 >
 > 本项目和APP(DoingWhat) 不会存储任何数据到本人的服务器（因为我懒，没有服务器）中，数据只是存储在公共的中转服务器中。
 
 ## 零 项目说明
+
 > 不知道说啥，这是一个想法几年前的项目，懒狗一条，拖拉了好几年就是不想学，不想写。
 >
 > 正好一年前(2025)的某个晚上在b站刷到了 [写了一个能让各位知道我睡没睡着的网页](https://www.bilibili.com/video/BV1fE421A7PE/)，然后每隔一段
@@ -26,11 +28,12 @@
 1. DoingWhat(**Android8.0+**)：获取个人设备使用情况，上传到一个公共服务器中存储数据
 2. Gaze：本项目只是一个静态页面，用于展示对应APP端（DoingWhat）上传到中转公共服务器的数据
 3. Gaze：项目默认展示的是“作者”的状态，但是也可以通过修改URL的参数为“自己”的状态
-   + 例子：https://gaze.kongyu039.dpdns.org/?read=你自己的READ值
-   + <span style="color:red">PS：使用DoingWhat时，用户的KEY不要暴露哦，复杂点避免KEY重复，以防READ到其他人的“状态”</font>
 
++ 例子：https://gaze.kongyu039.dpdns.org/?read=你自己的READ值
++ <span style="color:red">PS：使用DoingWhat时，用户的KEY不要暴露哦，复杂点避免KEY重复，以防READ到其他人的“状态”</font>
 
 ## 二 项目原因
+
 明明这么多视频了，我为什么还要搞一个这个项目呢？
 
 我认为上面的视频都只是想让"自己"被别人知道有没有“睡”，如果观众也想“赛博LU出”那将毫无办法(在视频下面也有蛮多人在问怎么自己部署)
@@ -42,6 +45,7 @@
 此项目应运而生，**主要就是零门槛，让看了的人哪怕自己没有“技术”，也能满足“赛博LU出”癖**
 
 ## N 致谢
+
 感谢以下开源项目和作者(Thanks to the following projects and authors)
 
 1. [1812z](https://github.com/1812z/RunTime_Tracker)
