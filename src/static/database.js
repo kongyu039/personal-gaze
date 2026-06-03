@@ -3,9 +3,11 @@
  */
 const dbJson = {
   /** 首页 */
-  home: "https://kongyu039.dpdns.org",
+  homeUrl: "https://kongyu039.dpdns.org",
+  /** Github */
+  githubUrl: "https://github.com/kongyu039/personal-gaze",
   /** 默认API接口 */
   defaultUrl: "https://api.txttool.cn/netcut/note/info/",
   /** 默认笔记ID */
-  defaultRead: "82b123eb52460997",
+  defaultRead: "37430de41699349d",
 }

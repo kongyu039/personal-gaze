@@ -5,16 +5,15 @@
  */
 function initView() {
   const headerHome = document.querySelector('.header-container>.home')
-  const headerRefresh = document.querySelector('.header-container>.refresh')
-  headerHome.addEventListener('click', headerHomeClick)
-  headerRefresh.addEventListener('click', headerRefreshClick)
+  const headerRefresh = document.querySelector('.header-container>div>.refresh')
+  const headerGithub = document.querySelector('.header-container>div>.github')
+  // 头部点击主页事件(在新标签页中打开)
+  headerHome.addEventListener('click', () => {window.open(dbJson.homeUrl, "_blank")})
+  // 头部点击刷新事件
+  headerRefresh.addEventListener('click', window.location.reload)
+  // 头部点击Github事件(在新标签页中打开)
+  headerGithub.addEventListener('click', () => {window.open(dbJson.githubUrl, "_blank")})
 }
-
-/** 头部点击主页事件(在新标签页中打开) */
-function headerHomeClick() {window.open(dbJson.home, "_blank")}
-
-/** 头部点击刷新事件 */
-function headerRefreshClick() {window.location.reload()}
 
 /**
  * 读取URL参数
@@ -246,7 +245,8 @@ function renderUsingAppInfo(usingFullAppInfo) {
   document.getElementById('todayUsageMsecondUsing').textContent = millisecondToHour(usingFullAppInfo['todayUsageMsecond']) + '小时'
   document.getElementById('yesterdayUsageMsecondUsing').textContent = millisecondToHour(usingFullAppInfo['yesterdayUsageMsecond']) + '小时'
   document.getElementById('weekTotalUsageMsecondUsing').textContent = millisecondToHour(usingFullAppInfo['weekTotalUsageMsecond']) + '小时'
-  document.getElementById('lastWeekTotalUsageMsecondUsing').textContent = millisecondToHour(usingFullAppInfo['lastWeekTotalUsageMsecond']) + '小时'
+  document.getElementById('lastWeekTotalUsageMsecondUsing').textContent = millisecondToHour(
+    usingFullAppInfo['lastWeekTotalUsageMsecond']) + '小时'
 }
 
 /**

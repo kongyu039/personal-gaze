@@ -1,1 +1,1 @@
-const dbJson={home:"https://kongyu039.dpdns.org",defaultUrl:"https://api.txttool.cn/netcut/note/info/",defaultRead:"82b123eb52460997"};
+const dbJson={homeUrl:"https://kongyu039.dpdns.org",githubUrl:"https://github.com/kongyu039/personal-gaze",defaultUrl:"https://api.txttool.cn/netcut/note/info/",defaultRead:"37430de41699349d"};
